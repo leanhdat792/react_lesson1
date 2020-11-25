@@ -11,7 +11,6 @@ class Task01 extends Component {
 		this.setState({text : "I am working!"})
 	}
 	render(){
-		const {text} = this.state
 		return (
 		    <div className="c-main">
 		      <button onClick={this.changeText} className="c-btn1">{this.state.text}</button>
