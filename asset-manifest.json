@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/leanhdat792/react_lesson1/static/css/main.aec2fdde.chunk.css",
+    "main.js": "/leanhdat792/react_lesson1/static/js/main.04951252.chunk.js",
+    "main.js.map": "/leanhdat792/react_lesson1/static/js/main.04951252.chunk.js.map",
+    "runtime-main.js": "/leanhdat792/react_lesson1/static/js/runtime-main.d2ff5b1b.js",
+    "runtime-main.js.map": "/leanhdat792/react_lesson1/static/js/runtime-main.d2ff5b1b.js.map",
+    "static/js/2.50b2aace.chunk.js": "/leanhdat792/react_lesson1/static/js/2.50b2aace.chunk.js",
+    "static/js/2.50b2aace.chunk.js.map": "/leanhdat792/react_lesson1/static/js/2.50b2aace.chunk.js.map",
+    "static/js/3.874f62c1.chunk.js": "/leanhdat792/react_lesson1/static/js/3.874f62c1.chunk.js",
+    "static/js/3.874f62c1.chunk.js.map": "/leanhdat792/react_lesson1/static/js/3.874f62c1.chunk.js.map",
+    "index.html": "/leanhdat792/react_lesson1/index.html",
+    "static/css/main.aec2fdde.chunk.css.map": "/leanhdat792/react_lesson1/static/css/main.aec2fdde.chunk.css.map",
+    "static/js/2.50b2aace.chunk.js.LICENSE.txt": "/leanhdat792/react_lesson1/static/js/2.50b2aace.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2ff5b1b.js",
+    "static/js/2.50b2aace.chunk.js",
+    "static/css/main.aec2fdde.chunk.css",
+    "static/js/main.04951252.chunk.js"
+  ]
+}
