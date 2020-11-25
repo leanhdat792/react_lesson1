@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,82 @@
     transform: rotate(360deg);
   }
 }
+
+h2{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+}
+
+.c-header{
+  display: flex;
+  align-items: center;
+  background-color: #333;
+}
+
+.c-header ul{
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+
+.c-header ul li a{
+  display: block;
+  text-decoration: none;
+  padding: 20px 20px;
+  color: #ffffff;
+}
+
+.c-header ul li a.active{
+  color: #000000;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.c-main{
+  margin: 30px 0px;
+  padding: 0 60px;
+}
+
+.c-tabs{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #999;
+}
+
+.c-tabs li{
+  float: left;
+  border: 1px solid #999;
+  border-bottom: none;
+  background: #e0e0e0;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  outline: none;
+}
+
+.c-tabs li:hover{
+  background: #ccc;
+}
+
+.c-tabs li.react-tabs__tab--selected, .tabs li.react-tabs__tab--selected:hover{
+  background: #fff;
+  font-weight: bold;
+}
+
+.react-tabs__tab-panel{
+  font-size: 16px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel--selected{
+  border: 1px solid #999;
+  border-top: none;
+  padding: 20px;
+}
+
