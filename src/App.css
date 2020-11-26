@@ -99,19 +99,16 @@ ul{
   background: #ccc;
 }
 
-.c-tabs li.react-tabs__tab--selected, .tabs li.react-tabs__tab--selected:hover{
+.c-tabs li.c-tabs__active, .tabs li.c-tabs__active:hover{
   background: #fff;
   font-weight: bold;
 }
 
-.react-tabs__tab-panel{
-  font-size: 16px;
-  background: #fff;
-}
-
-.react-tabs__tab-panel--selected{
+.c-tabs__content{
   border: 1px solid #999;
   border-top: none;
   padding: 20px;
+  font-size: 16px;
+  background: #fff;
 }
 
