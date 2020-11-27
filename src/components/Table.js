@@ -7,8 +7,8 @@ class Table extends Component{
       			<thead>
 	      			<tr>
 	      				<th><a href="#" onClick={() => this.props.sortBy('title')}>Title</a></th>
-	      				<th>Author(s)</th>
-	      				<th>Publish Date</th>
+	      				<th><a href="#" onClick={() => this.props.sortBy('authors')}>Author(s)</a></th>
+	      				<th><a href="#" onClick={() => this.props.sortBy('publishedYM')}>Publish Date</a></th>
 	      				<th><a href="#" onClick={() => this.props.sortBy('price')}>Price</a></th>
 	      			</tr>
       			</thead>
