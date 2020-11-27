@@ -7,7 +7,7 @@ class Tabs extends Component{
 				{React.Children.map(this.props.children, (child, i) => {
 					let className = 'c-tabs__link';
 					if(child.key === this.props.active){
-						className = 'c-tabs__link c-tabs__active';
+						className = 'c-tabs__link c-tabs__link--active';
 					}
 					return(
 						<li className={className} onClick={() => {this.props.onChange(child.key)}} >{child}</li>

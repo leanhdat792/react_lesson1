@@ -99,7 +99,7 @@ ul{
   background: #ccc;
 }
 
-.c-tabs li.c-tabs__active, .tabs li.c-tabs__active:hover{
+.c-tabs li.c-tabs__link--active, .tabs li.c-tabs__link--active:hover{
   background: #fff;
   font-weight: bold;
 }
