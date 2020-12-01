@@ -5,18 +5,18 @@ class Table extends Component{
 		return(
 			<div>
 	  			<div id="sort-control">
-	  				<a href="#" onClick={() => this.props.sortBy('title')}>Title</a>
-	  				<a href="#" onClick={() => this.props.sortBy('authors')}>Author(s)</a>
-	  				<a href="#" onClick={() => this.props.sortBy('publishedYM')}>Publish Date</a>
-	  				<a href="#" onClick={() => this.props.sortBy('price')}>Price</a>
+	  				<li onClick={(e) => this.props.sortBy(e, 'title')}>Title</li>
+	  				<li onClick={(e) => this.props.sortBy(e, 'authors')}>Author(s)</li>
+	  				<li onClick={(e) => this.props.sortBy(e, 'publishedYM')}>Publish Date</li>
+	  				<li onClick={(e) => this.props.sortBy(e, 'price')}>Price</li>
 	  			</div>
-	  			<table id="t-2" className="">
+	  			<table id="t-2">
 	  			    <tbody>
 		      			{
-		      				this.props.data.map(row => (
-		      					<tr key={row.title}>
+		      				this.props.data.map((row, index) => (
+		      					<tr key={index}>
 				      				<td>{row.title}</td>
-				      				<td>{row.authors}</td>
+				      				<td>{this.props.reverseString(row.authors)}</td>
 				      				<td>{row.published}</td>
 				      				<td>${row.price}</td>
 				      			</tr>

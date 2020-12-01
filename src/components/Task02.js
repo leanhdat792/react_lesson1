@@ -11,44 +11,54 @@ class Task02 extends Component {
 		};
 		this.sortBy = this.sortBy.bind(this)
 	}
-	sortBy(e, key) {
-		const sortedData = this.state.data.sort((a, b) => {
-			const sortDirection = 1;
-			if()
-			if(key === 'price'){
-				const numberA = parseFloat(a[key]);
-				const numberB = parseFloat(b[key]);
-				return this.state.direction[key] === 'asc' ? numberA - numberB : numberB - numberA;
-			} else if(key  === 'title') {
-				const nameA = a.title.toUpperCase();
-				const nameB = b.title.toUpperCase();
-				if(nameA < nameB){
-					return this.state.direction[key] === 'asc' ? -1 : 1;
-				}
-				if(nameA > nameB){
-					return this.state.direction[key] === 'asc' ? 1 : -1;
-				}
-				return 0;
-			} else if(key === 'authors'){
-				const nameA = a.authors.toUpperCase();
-				const nameB = b.authors.toUpperCase();
-				if(nameA < nameB){
-					return this.state.direction[key] === 'asc' ? -1 : 1;
-				}
-				if(nameA > nameB){
-					return this.state.direction[key] === 'asc' ? 1 : -1;
-				}
-				return 0;
-			} else  if(key === 'publishedYM'){
-				const dateA = new Date(a.publishedYM.split('-'));
-				const dateB = new Date(b.publishedYM.split('-'));
-				return this.state.direction[key] === 'asc' ? dateA - dateB : dateB - dateA;
+
+	capitalize(str){
+		return str.charAt(0).toUpperCase() + str.substr(1);
+	}
+
+	reverseString(str){
+		let lowerString = str.toLowerCase();
+		let splitString = lowerString.split(' ');
+		let string = '';
+		if(splitString.length < 2){
+			return this.capitalize(lowerString);
+		} else if(splitString.length % 2 === 0){
+			for(let i=0; i < splitString.length; i+=2 ){
+				if(i !== 0){string += ', ';}
+				string += this.capitalize(splitString[i+1]) + ' ' + this.capitalize(splitString[i]);
 			}
+		} else {
+			for(let i=0; i < splitString.length - 1; i+=2){
+				if(i !== 0){string += ', ';}
+				if(i === splitString.length - 3){
+					string += this.capitalize(splitString[i+1]) + ' ' + this.capitalize(splitString[i+2]) + ' ' + this.capitalize(splitString[i]);
+				} else {
+					string += this.capitalize(splitString[i+1]) + ' ' + this.capitalize(splitString[i]);
+				}
+			}
+		}
+		return string;
+	}
+
+	sortBy(e, key) {
+		let className = e.target.className;
+		let sortDirection = 1;
+		if (className.includes("sorted-asc")) {
+            sortDirection = -1;
+      	}
+		const sortedData = this.state.data.sort((a, b) => {
+			let aKey = a[key];
+			let bKey = b[key];
+			if(typeof aKey === "string" && typeof bKey === "string"){
+				aKey = aKey.toUpperCase();
+				bKey = bKey.toUpperCase();
+			}
+			if(aKey > bKey) return sortDirection;
+			if(aKey < bKey) return -sortDirection;
+			else return 0;
 		});
-		
-		this.setState({
-			data: sortedData
-		})
+		e.target.className = sortDirection === 1 ? "sorted-asc" : "sorted-desc";
+		this.setState({ data: sortedData });
 	}
 	render(){
 		return (
@@ -56,6 +66,8 @@ class Task02 extends Component {
 	      		<Table
 	      			data={this.state.data}
 	      			sortBy={this.sortBy}
+	      			reverseString={this.reverseString}
+	      			capitalize={this.capitalize}
 	      		/>
 	    	</div>
 	  	);
