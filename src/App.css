@@ -112,3 +112,19 @@ ul{
   background: #fff;
 }
 
+table{
+  margin: 1em 0;
+  font: 80% Verdana, Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+th, td{
+  padding: 3px 6px;
+}
+
+#sort-control a{
+  color: #06581f;
+  font: 80% Verdana, Helvetica, Arial, sans-serif;
+  margin-right: 5px;
+}
+

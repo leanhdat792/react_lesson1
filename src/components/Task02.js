@@ -7,21 +7,14 @@ class Task02 extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			data: data,
-			direction: {
-				title: 'asc',
-				authors: 'asc',
-				price: 'asc',
-				publishedYM: 'asc',
-			}
+			data: data
 		};
 		this.sortBy = this.sortBy.bind(this)
 	}
-	sortBy(key) {
-		const directData = {
-			[key]: this.state.direction[key] === 'asc' ? 'desc' : 'asc'
-		};
+	sortBy(e, key) {
 		const sortedData = this.state.data.sort((a, b) => {
+			const sortDirection = 1;
+			if()
 			if(key === 'price'){
 				const numberA = parseFloat(a[key]);
 				const numberB = parseFloat(b[key]);
@@ -54,8 +47,7 @@ class Task02 extends Component {
 		});
 		
 		this.setState({
-			data: sortedData,
-			direction: directData
+			data: sortedData
 		})
 	}
 	render(){
